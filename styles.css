@@ -1,299 +1,200 @@
-
-/********************* NOTES ************************
-The basic resets below allow you to create your own styling
-without having to fight some of the most annoying built in 
-agent user styles.
-****************************************************/
-
-/************* Basic Resets ***************/
-
-h1, h2, h3, h4, p, ul, ol, blockquote {
-	margin: 0;
-	padding: 0;
+/********************* Reset Styles *********************/
+body, h1, h2, h3, h4, p, ul, ol, blockquote {
+    margin: 0;
+    padding: 0;
 }
 
 nav ul, nav ol {
-	list-style-type: none;
+    list-style: none;
 }
 
-/******** Additional resets *********/
-a { text-decoration:none; }
+a {
+    text-decoration: none;
+}
 
 img {
-	display: block;
-	max-width:100%; 
-	height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
-/************ End CSS Reset  *************/
+/********************* Colors ***************************/
+:root {
+    --primary-color: #4A90E2;   /* Updated primary color */
+    --secondary-color: #F5F7FA; /* Light background */
+    --accent-color: #FF6F61;   /* Accent color */
+    --text-color: #333333;     /* Default text */
+    --light-text-color: #666666; /* Subdued text */
+}
 
-
-/********************* NOTES ************************
-Below are the only colors I have used. Choose four new
-colors and do a find and replace to replace the hex codes.
-****************************************************/
-
-
-/*********** Colors ***********
-
-primary = #b5b5b5;
-secondary = #efefef;
-accent = #4574b5
-text default = #333333;
-
-
-********************************/
-
-
-/************* Basic Page Rules ************/
-
-
-/********************* NOTES ************************
-I set the background of the page to dark and the main
-font to Georgia for most of the type. The header font
-is set to Arial. You could get two fonts that work well
-together and replace these choices. You may have to adjust
-sizing and spacing as well.
-****************************************************/
-
-
+/****************** Basic Page Rules *******************/
 body {
-	font-family:Georgia;
-	color:#333;
-	background:#333;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background: var(--secondary-color);
+    line-height: 1.6;
 }
 
-/************* typography ************/
-
-h1, h2, h3, h4, nav { 
-	font-family:Arial;
-	font-weight:bold; 
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
 }
 
+/****************** Typography *******************/
 h1 {
-	font-size:250%;
-	margin-bottom:1em;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 h2 {
-	font-size:170%;
-	margin-bottom:1em;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-h3 { 
-	font-size:135%;
-	margin-bottom:1em;
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
 }
 
-h4 { 
-	font-size:115%;
-	margin-bottom:.5em;
+h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
-	
 
 p {
-	line-height:1.5em;
-	margin-bottom:1em;
+    margin-bottom: 1rem;
+    color: var(--light-text-color);
 }
 
-a { color: #4574b5; }
+a {
+    color: var(--accent-color);
+    transition: color 0.3s ease;
+}
 
-.social { font-size:175%; }
+a:hover {
+    color: var(--primary-color);
+}
 
-.centered { text-align:center; }
-
-/****************** Grid ******************/
-
-.primary { background:#b5b5b5; }
-.secondary { background:#efefef; }
-
-
-/****************** Header and Main Navigation ****************/
-
+/**************** Header and Navigation *****************/
 header {
-	padding: 20px;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 20px;
 }
 
 header .wrapper {
-	display: flex;
-	flex-direction: column-reverse;
-	flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo-container {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
+header .logo-container {
+    display: flex;
+    align-items: center;
 }
 
-#logo {
-	margin-right:20px;
+header .logo-container #logo {
+    margin-right: 20px;
 }
 
-
-#mainnav {
-	margin-bottom: 20px;
+nav ul {
+    display: flex;
+    gap: 15px;
 }
 
-#mainnav ul {
-	display: flex;
-	justify-content: center;
+nav ul li a {
+    font-size: 1rem;
+    padding: 8px 15px;
+    color: #fff;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 }
 
-#mainnav ul li a {
-	display:block;
-	color: #4574b5;
-	border-left: 2px solid #4574b5;
-	padding:0 20px;
-	font-size:20px;
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
 }
 
-/********************* NOTES ************************
-Removes the border on the first link...
-****************************************************/
-
-#mainnav ul li:first-of-type a {
-	border:none;
+/**************** Grid and Layout *****************/
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
+.primary {
+    background: var(--primary-color);
+    color: #fff;
+}
 
-/***************** Section Specific Rules *****************/
+.secondary {
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/******************* Content Sections *******************/
+section {
+    padding: 40px 20px;
+}
 
 #work {
-	background:#fff;
-	padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#work img, .additional-projects img {
-	width: 100%;
-	margin-bottom: 10px;
+#work img {
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-.featured, .projects, #page-template #work section {
-	margin-bottom: 40px;
+.featured, .projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-#about-contact, .additional-projects {
-	padding: 20px;
+.featured article, .projects article {
+    flex: 1 1 calc(50% - 20px);
+    background: var(--secondary-color);
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#about-contact img {
-	margin-bottom: 10px;
+.featured article:hover, .projects article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-/********************* NOTES ************************
-I added all this margin to the bottom of the footer so
-that when you click the link for "about" or "contact" in
-the main nav, there is room for them to go all the way to
-the top of the page.
-****************************************************/
-
+/******************* Footer *******************/
 footer {
-	padding: 20px;
-	margin-bottom:600px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px;
 }
 
-@media only screen and (min-width: 650px) {
-	#work {
-		padding: 20px 10px;
-	}
-	
-	#work article, h2 {
-		padding: 0 10px;
-	}
-	
-	.projects, #page-template #work section  {
-		display: flex;
-		flex-wrap: wrap;
-	}
-	
-	.projects article, #page-template #work section article {
-		width: 50%;
-	}
-	
-	.additional-projects .wrapper{
-		display: flex;
-		flex-wrap: wrap;
-	}
-	
-	.additional-projects h2 {
-		flex-basis: 100%;
-	}
-	
-	.additional-projects article {
-		width: 50%;
-		padding: 0 10px;
-	}
-	
-	#about-contact {
-		padding: 0;
-	}
-	
-	#about-contact .wrapper {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		padding: 20px 10px;
-	}
-	
-	#about-contact .profile-photo {
-		flex: 1;
-		padding: 0 10px;
-		width: 100%;
-	}
-	
-	#about-contact article {
-		padding: 0 10px;
-	}
-	
-	#about-contact article:first-of-type {
-		flex: 2;
-	}
-	
-	#about-contact article:last-of-type {
-		flex-basis: 100%;
-	}
-	
+footer p {
+    font-size: 0.9rem;
 }
 
+/******************* Responsive Design *******************/
 @media only screen and (min-width: 768px) {
-	
-	.featured {
-		display: flex;
-	}
-	
-	.featured article {
-		flex: 1;
-	}
-	
-	.additional-projects article {
-		width: 25%;
-	}
-	
-	#about-contact .wrapper {
-		flex-wrap: nowrap;
-	}
-	
-	#about-contact article:last-of-type {
-		flex: 2;
-		flex-basis: 0;
-	}
+    .featured, .projects {
+        gap: 30px;
+    }
+
+    .featured article, .projects article {
+        flex: 1 1 calc(33.333% - 30px);
+    }
 }
 
-@media only screen and (min-width: 1040px) {
-	.wrapper {
-		width: 1020px;
-		margin: auto;
-	}
-	
-	header .wrapper {
-		padding: 0 10px;
-	}
-	
-	/*Change the width here to 33% if you want three articles in a row*/
-	.projects article {
-		width: 25%;
-	}
+@media only screen and (min-width: 1200px) {
+    .projects article {
+        flex: 1 1 calc(25% - 30px);
+    }
 }
