@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omsai Baswaraj Bulla | Portfolio</title>
+    
+    <!-- Normalize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #f4f4f4;
+            color: #333;
+            padding: 2rem 0;
+            text-align: center;
+            border-bottom: 2px solid #eaeaea;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 0.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        section {
+            padding: 4rem 1.5rem;
+        }
+
+        .wrapper {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            background: #eaeaea;
+            padding: 4rem 1rem;
+        }
+
+        .hero img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .project img {
+            width: 100%;
+            display: block;
+        }
+
+        .project h3 {
+            padding: 1rem;
+            font-size: 1.25rem;
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .project p {
+            padding: 0 1rem 1rem;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .about-contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .about,
+        .contact {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about p,
+        .contact p {
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #333;
+            color: #fff;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>A Creative Designer & Developer | Welcome to My Portfolio</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#about-contact">About Me</a></li>
+            <li><a href="#about-contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <img src="https://via.placeholder.com/150" alt="Profile Photo">
+        <h2>Hello, I'm Your Name</h2>
+        <p>Crafting thoughtful and engaging designs that bring ideas to life. I'm passionate about delivering exceptional work that leaves a lasting impact.</p>
+    </section>
+
+    <section id="work" class="wrapper">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <img src="https://via.placeholder.com/340x200" alt="Project Image">
+                <h3>Project One</h3>
+                <p>A web application for tracking fitness goals and daily progress.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/340x200" alt="Project Image">
+                <h3>Project Two</h3>
+                <p>A sleek e-commerce platform for local businesses.</p>
+            </div>
+            <div class="project">
+                <img src="https://via.placeholder.com/340x200" alt="Project Image">
+                <h3>Project Three</h3>
+                <p>Redesigned a restaurant's online menu for a better user experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-contact" class="wrapper about-contact">
+        <div class="about">
+            <h2>About Me</h2>
+            <p>I am a developer with a knack for combining creativity and functionality. Whether it's designing seamless interfaces or coding efficient solutions, I strive to exceed expectations. My skills include web development, UI/UX design, and more.</p>
+        </div>
+        <div class="contact">
+            <h2>Contact</h2>
+            <p>If you're interested in working together or just want to say hello, feel free to reach out!</p>
+            <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+            <p>Phone: 123-456-7890</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+
+</html>
